@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+a, a:visited { 
+    color: transparent;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+
+:root { 
+    /* colors */
+    /* primary */
+    --blue-200: hsl(225, 100%, 94%);
+    --blue-500: hsl(245, 75%, 52%);
+
+    /* neutral */
+    --blue-100: hsl(225, 100%, 98%);
+    --blue-300: hsl(224, 23%, 55%);
+    --blue-600: hsl(223, 47%, 23%);
+
+    
+
+    /* custom */
+    --white-100: rgb(255, 255, 255);
+    --blue-400: hsl(246, 60%, 70%);
+
+    /* typography */
+    --fs-base: 16px;
+    --family: 'Red Hat Display', sans-serif;
+    --weight-light: 500;
+    --weight-normal: 700;
+    --weight-bold: 900; 
+
+    /* borders */
+    --radii: 1rem;
+}
+
+* { 
+    box-sizing: border-box;
+}
+
+p {
+    margin: 0;
+}
+
+body { 
+    margin:0;
+    font-family: var(--family);
+    font-size: var(--fs-base);
+    height: 100vh;
+    background-color: var(--blue-200);
+
+    /* mobile */
+    background-image: url("images/pattern-background-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+main { 
+    height: 100%;
+    width:100%;
+}
+
+.content-flex {
+    height: 100%;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.summary-card {
+    display: block;
+    width: 330px;
+    height:fit-content;
+    background-color: var(--white-100);
+    text-align: center;
+
+    border-radius: var(--radii);
+    padding: 1.5rem;
+
+    box-shadow: 0 1.5rem 2rem  hsl(224, 31%, 81%);
+}
+
+@media only screen and (min-width: 100vh) {
+    body { 
+        background-image: url("images/pattern-background-desktop.svg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+}
+
+.summary-card__img {
+    margin: -1.5rem;
+    width: calc(100% + 3rem);
+    border-radius: var(--radii) var(--radii) 0 0;
+}
+
+.summary-card__title {
+    margin-top: 3rem;
+    font-size: calc(var(--fs-base)*1.4);
+    font-weight: var(--weight-bold);
+    color: var(--blue-600);
+}
+
+.summary-card__description {
+    margin: 0 0 1.5rem 0;
+    padding: 0 0.6rem;
+    font-weight: var(--weight-light);
+    font-size: var(--fs-base);
+    color: var(--blue-300);
+    line-height: 1.5;
+}
+
+.plan-card {
+    background-color: var(--blue-100);
+    border-radius: calc(var(--radii)*0.75);
+    padding: 1rem;
+    display:flex;
+}
+
+.plan-card__icon  {
+    height: 48px;
+    width: 48px;
+}
+
+.plan-card__text {
+    display:grid;
+    margin-left: 1.5rem;
+    font-size: calc(var(--fs-base)*0.9);
+    align-content:space-around;
+    padding: 2px 0;
+}
+
+.plan-card__change-button { 
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-grow: 1;
+    color: var(--blue-500);
+    
+    font-size: calc(var(--fs-base)*0.9);
+    font-weight: var(--weight-normal);
+    text-decoration: underline;
+}
+
+.plan-card__title {
+    font-weight: var(--weight-normal);
+}
+
+.plan-card__cost {
+    font-weight: var(--weight-light);
+    color: var(--blue-300);
+}
+
+.summary-card__cancel {
+    display:block;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+    font-weight: var(--weight-bold);
+    color: var(--blue-300);
+    font-size: calc(var(--fs-base)*0.9);
+}
+
+
+.summary-card__proceed__title {
+    font-weight: var(--weight-normal);
+    color: var(--white-100);
+    font-size: calc(var(--fs-base)*0.9);
+}
+
+.summary-card__proceed {
+    
+    margin-top: 1.5rem; 
+
+    display: flex;
+    width: 100%;
+    height: 50px;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: calc(var(--radii)*0.8);
+    background-color: var(--blue-500);
+    box-shadow: 0 1.25rem 1.4rem hsla(239, 100%, 87%, 0.781);
+
+    transition: background-color 0.3s ease-in-out;
+}
+
+.plan-card__change-button:hover { 
+    text-decoration:none;
+    color: var(--blue-400);
+}
+
+.summary-card__proceed:hover {
+    background-color:var(--blue-400);
+    cursor:pointer;
+}
+
+.summary-card__cancel:hover {
+    color: var(--blue-600);
+}
