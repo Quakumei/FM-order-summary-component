@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Github link](https://github.com/Quakumei/fm-order-summary-component)
+- Live Site URL: [Live site URL](https://fm-order-summary-component-quakumei.vercel.app/)
 
 ## My process
 
